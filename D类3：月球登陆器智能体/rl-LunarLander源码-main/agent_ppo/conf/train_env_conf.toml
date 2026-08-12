@@ -1,0 +1,40 @@
+algo = "ppo"
+env = "LunarLander-v3"
+organization = "sb3"
+log_folder = "logs"
+hyperparams_file = "agent_ppo/conf/ppo_lunarlander.yml"
+
+[reward]
+scale = 1.0
+bias = 0.0
+success_threshold = 200.0
+
+[model]
+policy = "MlpPolicy"
+observation_dim = 8
+action_num = 4
+actor_hidden_layers = [64, 64]
+critic_hidden_layers = [64, 64]
+activation_fn = "Tanh"
+ortho_init = true
+
+[train]
+n_timesteps = 1000000
+n_envs = 16
+n_steps = 1024
+batch_size = 64
+n_epochs = 4
+learning_rate = 0.0003
+gamma = 0.999
+gae_lambda = 0.98
+clip_range = 0.2
+ent_coef = 0.01
+vf_coef = 0.5
+max_grad_norm = 0.5
+normalize = false
+norm_obs = false
+norm_reward = false
+train_seed = 0
+eval_seed = 10000
+eval_freq_steps = 25000
+n_eval_episodes = 20
