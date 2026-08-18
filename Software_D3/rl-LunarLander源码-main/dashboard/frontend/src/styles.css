@@ -1,0 +1,430 @@
+:root {
+  background: #edf1f5;
+  color: #172033;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 22px;
+}
+
+.header {
+  align-items: center;
+  background: #1f2933;
+  border-radius: 8px;
+  color: #f8fafc;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(220px, 1fr) auto 42px;
+  min-height: 76px;
+  padding: 16px 18px;
+}
+
+.brandLine {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.brandLine strong,
+.brandLine span {
+  display: block;
+}
+
+.brandLine strong {
+  font-size: 18px;
+}
+
+.brandLine span {
+  color: #b8c4d4;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.viewTabs {
+  background: #2b3745;
+  border: 1px solid #425266;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+}
+
+.viewTabs button,
+.envSelector button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  color: #dbe4ef;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  min-height: 38px;
+  min-width: 128px;
+  padding: 0 14px;
+}
+
+.viewTabs button.active,
+.envSelector button.active {
+  background: #f8fafc;
+  color: #172033;
+}
+
+.iconButton {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #172033;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.page {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.trainPage {
+  grid-template-columns: 330px minmax(0, 1fr);
+}
+
+.evaluatePage {
+  grid-template-columns: minmax(0, 1fr) 390px;
+}
+
+.controlPanel,
+.monitorPanel,
+.replayHero,
+.card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 14px 35px rgba(24, 32, 47, 0.07);
+  min-width: 0;
+  padding: 18px;
+}
+
+.controlPanel {
+  align-content: start;
+  display: grid;
+  gap: 16px;
+}
+
+.eyebrow {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.envSelector {
+  background: #edf2f7;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+}
+
+.envSelector button {
+  color: #344256;
+  min-width: 0;
+}
+
+label {
+  color: #465568;
+  display: grid;
+  font-size: 14px;
+  gap: 7px;
+}
+
+input[type="number"] {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #172033;
+  min-height: 42px;
+  padding: 0 11px;
+}
+
+.toggle {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.deviceSelector {
+  display: grid;
+  gap: 7px;
+}
+
+.deviceSelector span {
+  color: #465568;
+  font-size: 14px;
+}
+
+.deviceSelector div {
+  background: #edf2f7;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+}
+
+.deviceSelector button {
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  color: #344256;
+  min-height: 38px;
+}
+
+.deviceSelector button.active {
+  background: #f8fafc;
+  color: #172033;
+}
+
+.primaryAction {
+  align-items: center;
+  background: #1f2933;
+  border: 1px solid #1f2933;
+  border-radius: 8px;
+  color: #ffffff;
+  display: inline-flex;
+  gap: 9px;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+}
+
+.statusBox {
+  background: #f8fafc;
+  border: 1px solid #dce3ec;
+  border-radius: 8px;
+  display: grid;
+  gap: 5px;
+  padding: 14px;
+}
+
+.statusBox span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.statusBox strong {
+  margin-bottom: 6px;
+}
+
+.panelTitle {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.panelTitle.compact {
+  margin-bottom: 12px;
+}
+
+.panelTitle p {
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.metricGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 14px;
+}
+
+.trainPage .metricGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat {
+  background: #f8fafc;
+  border: 1px solid #dce3ec;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.stat span,
+.stat strong {
+  display: block;
+}
+
+.stat span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.stat strong {
+  font-size: 18px;
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+
+.evalSide {
+  display: grid;
+  gap: 14px;
+}
+
+.modelList {
+  display: grid;
+  gap: 8px;
+  max-height: 270px;
+  overflow: auto;
+}
+
+.modelRow {
+  background: #f8fafc;
+  border: 1px solid #dce3ec;
+  border-radius: 8px;
+  color: #172033;
+  display: grid;
+  gap: 3px;
+  min-height: 64px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.modelRow.active {
+  border-color: #2563eb;
+  box-shadow: inset 0 0 0 1px #2563eb;
+}
+
+.modelRow strong,
+.modelRow span,
+.modelRow em {
+  overflow-wrap: anywhere;
+}
+
+.modelRow span,
+.modelRow em {
+  color: #64748b;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.replayHero {
+  display: grid;
+  grid-template-rows: auto minmax(420px, 1fr) auto;
+}
+
+.replayControls {
+  display: flex;
+  gap: 8px;
+}
+
+.largeReplay {
+  align-items: center;
+  aspect-ratio: 16 / 10;
+  background: #0d141b;
+  border: 1px solid #0f172a;
+  border-radius: 8px;
+  color: #cbd5e1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.largeReplay img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media (max-width: 1080px) {
+  .trainPage,
+  .evaluatePage {
+    grid-template-columns: 1fr;
+  }
+
+  .evalSide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .curveCard {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .app {
+    padding: 12px;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  .viewTabs,
+  .metricGrid,
+  .trainPage .metricGrid,
+  .evalSide {
+    grid-template-columns: 1fr;
+  }
+
+  .curveCard {
+    grid-column: auto;
+  }
+
+  .largeReplay {
+    min-height: 300px;
+  }
+}
