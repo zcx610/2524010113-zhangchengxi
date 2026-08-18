@@ -1,2 +1,0 @@
-from .conf import Config
-
